@@ -3,7 +3,7 @@ body {
     padding: 0;
     height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 .container {
@@ -13,17 +13,45 @@ body {
 
 .side-bar {
     height: 100vh;
-    background-color: rgb(69, 144, 206);
+    background-color: rgb(25, 146, 212);
     color: white;
     font-weight: 600;
+    min-width: 20vw;
+    font-size: 1.5rem;
 }
 
 .side-group {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .side-button {
     margin-left: 15%;
+}
+
+.side-button > p > svg {
+    margin-bottom: -3px;
+    margin-right: .7rem;
+    fill: white;
+}
+
+.logo {
+    display: flex;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-left: 3%;
+    padding-bottom: 25px;
+}
+
+.logo > svg {
+    margin-left: 3%;
+    margin-bottom: -3px;
+    margin-right: .7rem;
+    fill: white;
+    height: 3.5rem;
+}
+
+.logo-title {
+    padding-top: 2%;
 }
 
 .user-panel {
@@ -32,7 +60,8 @@ body {
 }
 
 .up-header {
-    height: 15%;
+    position: relative;
+    box-shadow: 0 6px 5px -1px lightgray;   
 }
 
 .up-panel {
@@ -46,28 +75,37 @@ body {
     margin-left: 15px;
 }
 
+
 .projects {
-    grid-area: 1 / 1 / 3 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
     width: 50%;
     height: 70%;
 }
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
 .project-card {
     display: grid;
     background-color: white;
     border-radius: 6px;
     padding: 12px;
+    width: 25vw;
+    box-shadow: 2px 5px 5px lightgrey;
+    border-left: .6rem solid rgb(240, 180, 41);
 }
 
-.project-card > .title {
-    font-size: .8rem;
+.content > .title {
+    font-size: 1.1rem;
     font-weight: 600;
 }
-.project-card > .content {
-    color:grey;
-    font-size: 0.7rem;
+.content > .text {
+    color: rgb(99, 99, 99);
+    font-size: 1rem;
     margin-top: -10px;
 } 
 
@@ -78,9 +116,10 @@ body {
 
 svg {
     height: 25px;
-    fill: grey;
+    fill: rgb(51, 51, 51);
 }
 
 .right-side {
     grid-area: 1 / 2 / 2 /3;
 }
+
