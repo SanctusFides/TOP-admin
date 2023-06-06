@@ -11,13 +11,15 @@ body {
     grid-template-columns: 1fr 5fr;
 }
 
+
+/* FOR ALL THE OBJECTS IN THE LEFT BLUE BAR SIDE */
 .side-bar {
-    height: 100vh;
     background-color: rgb(25, 146, 212);
     color: white;
     font-weight: 600;
     min-width: 20vw;
     font-size: 1.5rem;
+    height: 100vh;
 }
 
 .side-group {
@@ -54,27 +56,137 @@ body {
     padding-top: 2%;
 }
 
+
+/* USER PANEL IS THE ENTIRE PORTION ON THE RIGHT SIDE OF THE BLUE BAR */
+
 .user-panel {
     display: grid;
     grid-template-rows: 1fr 5fr;
 }
 
+
+
+/* THE HEADER IS THE TOP WHITE PORTION OF THE PANEL */
+
 .up-header {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    box-shadow: 0 6px 5px -1px lightgray;   
+    font-weight: 600;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    box-shadow: none;
+    box-shadow: 0 5px 5px -2px lightgray;   
+    gap: 1rem;
 }
 
-.up-panel {
+
+
+/* NAV BAR IS THE VERY TOP STRIP OF ELEMENTS WITH SEARCH BAR AND USER/NOTIFICATION ICONS */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-search { 
+    display: grid;
+    grid-template-columns: 1fr 14fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-user {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.greeting-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-content > p {
+    margin: 0;
+}
+
+
+.search-icon, .bell {
+    background: none;
+    border: none;
+}
+
+.sm-icon {
+    max-height: 3rem;
+    border-radius: 50%;
+}
+
+.lg-icon {
+    max-height: 5rem;
+    border-radius: 50%;
+}
+
+.social {
+    background-color: rgb(25, 146, 212);
+    color: white;
+    border-radius: 22px;
+    box-shadow: none;
+    border: none;
+    height: 3rem;
+    width: 7rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.search-bar {
+    background-color: rgb(226, 232, 240);
+    border-radius: 22px;
+    box-shadow: none;
+    border: none;
+    height: 2rem;
+    width: 36rem;
+}
+
+
+/* SOCIAL BUTTONS ARE FOR NEW - UPLOAD - SHARE */
+.social-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+/* UP CARDS IS THE SECTION THAT HOLDS PROJECTS, ANNOUNCEMENTS AND TRENDING */
+
+/* .up-cards {
     display: grid;
     grid-template-columns: 3fr 1fr;
     background-color: rgb(227, 232, 239);
     height: 100%;
-}
+    padding-left: 1rem;
+} */
 
-.up-panel > * {
-    margin-left: 15px;
+.up-cards {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: rgb(227, 232, 239);
+    height: 100%;
+    padding-left: 1rem;
 }
-
 
 .projects {
     display: flex;
@@ -110,11 +222,6 @@ body {
     margin-top: -10px;
 } 
 
-/* .icons{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-} */
-
 .icons {
     display: flex;
     justify-content: flex-end;
@@ -127,7 +234,76 @@ svg {
     fill: rgb(51, 51, 51);
 }
 
+
+/* THE RIGHT SIDE OF THE MAIN PANEL FOR ANNOUNCEMENTS AND TRENDING */
 .right-side {
-    grid-area: 1 / 2 / 2 /3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: -20px;
+    margin-right: 20px;
 }
+
+.announce-card {
+    background-color: white;
+    border-radius: 6px;
+    padding: 2rem;
+    box-shadow: 2px 5px 5px lightgrey;
+}
+
+.announcement{
+    display: flex;
+    flex-direction: column;
+}
+.announcement > .title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.announcement > .text {
+    font-size: .8rem;
+    color: rgb(99, 99, 99);
+
+}
+.announcement > p {
+    margin: 0;
+}
+
+.trending-cards {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 2px 5px 5px lightgrey;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.trending-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.user-title{
+    color: rgb(99, 99, 99);
+}
+
+.trending-contact > p {
+    margin: 0;
+}
+
+h4 {
+    margin-bottom: 1rem;
+}
+
+
+
 
